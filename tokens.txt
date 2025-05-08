@@ -1,0 +1,65 @@
+{
+    "message": "added",
+    "user": {
+        "name": "abdelrahman adel",
+        "email": "abdelrahmanadel@gmail.com",
+        "password": "$2b$08$HpekiFmhdU9DDoDFV3OiNu41jwsPjwLS59zxbnCsamRI7nGYxtg4a",
+        "role": "admin",
+        "_id": "68017d23a8e1b3c2bd6f1e2e",
+        "createdAt": "2025-04-17T22:13:55.357Z",
+        "updatedAt": "2025-04-17T22:13:55.357Z"
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODAxN2QyM2E4ZTFiM2MyYmQ2ZjFlMmUiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NDQ5MjgwMzV9.wqNNgITR4Kiso6KlkXdPkzVyshIjL93esPg8yOyagFw"
+}
+
+
+
+{
+    "message": "added",
+    "user": {
+        "name": "Adel Khaled",
+        "email": "adelkhaled@gmail.com",
+        "password": "$2b$08$VAP5FoRAxjDmDDIVMZVn6eusHbsvNE067dF3CHC39RhhNE.lv6VXa",
+        "role": "admin",
+        "_id": "68017d83a8e1b3c2bd6f1e32",
+        "createdAt": "2025-04-17T22:15:31.240Z",
+        "updatedAt": "2025-04-17T22:15:31.240Z"
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODAxN2Q4M2E4ZTFiM2MyYmQ2ZjFlMzIiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NDQ5MjgxMzF9.-Z6_Y8a95xgIE-w4XY4LGLoprgVt0-KmHZRjhc_EsKY"
+}
+
+
+
+
+
+
+{
+    "message": "added",
+    "user": {
+        "name": "ahmed salah",
+        "email": "ahmedsalah@gmail.com",
+        "password": "$2b$08$MT6eeBbluxAGv7wjlFw5OugfIenBaoUHJ6/Ee7Qgc4Yxow/DzHV3a",
+        "role": "user",
+        "_id": "68017df1a8e1b3c2bd6f1e38",
+        "createdAt": "2025-04-17T22:17:21.839Z",
+        "updatedAt": "2025-04-17T22:17:21.839Z"
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODAxN2RmMWE4ZTFiM2MyYmQ2ZjFlMzgiLCJyb2xlIjoidXNlciIsImlhdCI6MTc0NDkyODI0MX0.6CIrGFFlXh7jlD_2dhKL-p7fw9BxAaI7AYHMWcLaLMY"
+}
+
+
+
+
+{
+    "message": "added",
+    "user": {
+        "name": "ahmed ramadan",
+        "email": "ahmedramadan@gmail.com",
+        "password": "$2b$08$lXJk8Z/wRiD7gG9/y8HOx.QQrWxxCox8Ox1NlLVN.fB8McnlkA0hS",
+        "role": "user",
+        "_id": "68017e16a8e1b3c2bd6f1e3b",
+        "createdAt": "2025-04-17T22:17:58.260Z",
+        "updatedAt": "2025-04-17T22:17:58.260Z"
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODAxN2UxNmE4ZTFiM2MyYmQ2ZjFlM2IiLCJyb2xlIjoidXNlciIsImlhdCI6MTc0NDkyODI3OH0.aW0Se6iP7CS57Ox2ENm4z8zL3p4Igp5AXEq4auQGb3s"
+}

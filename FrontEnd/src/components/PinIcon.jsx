@@ -1,0 +1,9 @@
+import React from 'react';
+
+const PinIcon = (props) => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <path d="M16 2H8v2h8V2zm-2 6.4V6H10v2.4l-1.6 1.6v2h3.2v5l1.6 1.6V12h3.2v-2L15 8.4z" fill="currentColor"/>
+  </svg>
+);
+
+export default PinIcon; 
