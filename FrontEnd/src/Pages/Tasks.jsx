@@ -440,6 +440,56 @@ const TaskCard = ({ task, onEdit, onDelete, isDarkMode, index, setTasks }) => {
     }
   };
 
+  // Add function to handle finishing task
+  const handleFinishTask = async (e) => {
+    e.stopPropagation();
+    try {
+      if (!userToken) {
+        toast.error("Please login to update task status");
+        return;
+      }
+
+      const response = await axios.patch(
+        `http://localhost:3000/api/task/${task._id}/status`,
+        {
+          status: "completed",
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${userToken}`,
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      if (response.data.message === "status updated") {
+        // Refresh the tasks list
+        const tasksResponse = await axios.get(
+          `http://localhost:3000/api/task/userTasks/${userData._id}`,
+          {
+            headers: {
+              Authorization: `Bearer ${userToken}`,
+              "Content-Type": "application/json",
+            },
+          }
+        );
+        if (tasksResponse.data.message === "success") {
+          setTasks(tasksResponse.data.tasks);
+          toast.success("Task marked as completed");
+        }
+      }
+    } catch (error) {
+      console.error("Error updating task status:", error);
+      if (error.response?.status === 401) {
+        toast.error("Session expired. Please login again.");
+      } else if (error.response?.status === 403) {
+        toast.error("You are not assigned to this task");
+      } else {
+        toast.error("Failed to update task status");
+      }
+    }
+  };
+
   function handleClickOutside(event) {
     if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
       setDropdownOpen(false);
@@ -596,18 +646,32 @@ const TaskCard = ({ task, onEdit, onDelete, isDarkMode, index, setTasks }) => {
                 )}
               </div>
             ) : (
-              task.status === "to do" && (
-                <button
-                  onClick={handleStatusUpdate}
-                  className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
-                    isDarkMode
-                      ? "bg-blue-500/20 text-blue-400 hover:bg-blue-500/30"
-                      : "bg-blue-100 text-blue-600 hover:bg-blue-200"
-                  }`}
-                >
-                  Start Task
-                </button>
-              )
+              <div className="flex gap-2">
+                {task.status === "to do" && (
+                  <button
+                    onClick={handleStatusUpdate}
+                    className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
+                      isDarkMode
+                        ? "bg-blue-500/20 text-blue-400 hover:bg-blue-500/30"
+                        : "bg-blue-100 text-blue-600 hover:bg-blue-200"
+                    }`}
+                  >
+                    Start Task
+                  </button>
+                )}
+                {task.status === "in progress" && (
+                  <button
+                    onClick={handleFinishTask}
+                    className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
+                      isDarkMode
+                        ? "bg-green-500/20 text-green-400 hover:bg-green-500/30"
+                        : "bg-green-100 text-green-600 hover:bg-green-200"
+                    }`}
+                  >
+                    Finish Task
+                  </button>
+                )}
+              </div>
             )}
           </div>
           {task.description && (

@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "framer-motion": "^12.7.4"
+    "framer-motion": "^12.7.4",
+    "vercel": "^41.7.3"
   }
 }
